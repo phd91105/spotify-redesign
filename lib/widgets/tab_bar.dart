@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_vector_icons/flutter_vector_icons.dart';
+import 'package:get/get.dart';
+import 'package:spotify_redesign/screens/login.dart';
 import 'package:spotify_redesign/utils/constants.dart';
 
 class CustomTabBar extends StatelessWidget {
@@ -48,7 +50,7 @@ class CustomTabBar extends StatelessWidget {
           TabItem(
             name: 'PROFILE',
             icon: Feather.user,
-            tapEvent: () {},
+            tapEvent: () => Get.off(LoginScreen()),
             isActive: false,
             timeFactor: 4,
           ),
@@ -76,7 +78,7 @@ class TabItem extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return InkWell(
-      onTap: () {},
+      onTap: tapEvent,
       child: Container(
         padding: EdgeInsets.all(5.0),
         height: 60.0,

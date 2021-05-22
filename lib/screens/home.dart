@@ -14,7 +14,7 @@ class HomeScreen extends StatelessWidget {
     return Scaffold(
       appBar: PreferredSize(
         child: Navbar(),
-        preferredSize: Size(MediaQuery.of(context).size.width, 150.0),
+        preferredSize: Size(MediaQuery.of(context).size.width, 160),
       ),
       body: Stack(
         children: [
