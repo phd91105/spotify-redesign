@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:spotify_redesign/screens/homescreen.dart';
+import 'package:spotify_redesign/screens/home.dart';
 import 'package:spotify_redesign/utils/constants.dart';
 
 void main() {
@@ -11,8 +11,9 @@ void main() {
       theme: ThemeData(
         scaffoldBackgroundColor: primaryBlack,
         appBarTheme: AppBarTheme(
+          color: primaryBlue,
           elevation: 0,
-          brightness: Brightness.dark,
+          brightness: Brightness.light,
         ),
       ),
     ),

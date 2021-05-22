@@ -1,5 +1,6 @@
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
+import 'package:spotify_redesign/utils/constants.dart';
 import 'package:spotify_redesign/utils/mock.dart';
 
 class HomeSlider extends StatelessWidget {
@@ -45,7 +46,7 @@ class HomeSlider extends StatelessWidget {
                       bottomLeft: Radius.circular(15),
                       bottomRight: Radius.circular(15),
                     ),
-                    color: Color(0xff2f2f31),
+                    color: kTabBarColor,
                   ),
                   child: Center(
                     child: Container(
