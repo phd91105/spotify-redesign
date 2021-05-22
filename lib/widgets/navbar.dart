@@ -9,38 +9,46 @@ class Navbar extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      height: 150,
-      padding: EdgeInsets.only(top: 28),
-      child: Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 20),
-        child: Row(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          children: [
-            Text(
-              'Good morning',
-              style: TextStyle(
-                  fontSize: 26,
-                  fontWeight: FontWeight.w700,
-                  color: Colors.white),
+    return Stack(
+      children: [
+        Container(
+          height: 150,
+          padding: EdgeInsets.only(top: 32),
+          child: Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 20),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                Text(
+                  'Good morning',
+                  style: TextStyle(
+                      fontSize: 26,
+                      fontWeight: FontWeight.w700,
+                      color: Colors.white),
+                ),
+                Icon(
+                  Feather.settings,
+                  color: Colors.white,
+                ),
+              ],
             ),
-            Icon(
-              Feather.settings,
-              color: Colors.white,
+          ),
+          decoration: BoxDecoration(
+            gradient: LinearGradient(
+              begin: Alignment.topCenter,
+              end: Alignment.bottomCenter,
+              colors: [
+                primaryBlue,
+                primaryBlack,
+              ],
             ),
-          ],
+          ),
         ),
-      ),
-      decoration: BoxDecoration(
-        gradient: LinearGradient(
-          begin: Alignment.topCenter,
-          end: Alignment.bottomCenter,
-          colors: [
-            primaryBlue,
-            primaryBlack,
-          ],
-        ),
-      ),
+        Container(
+          height: 50,
+          color: Colors.black54,
+        )
+      ],
     );
   }
 }
