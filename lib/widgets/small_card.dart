@@ -31,35 +31,31 @@ class SmallCard extends StatelessWidget {
           SizedBox(
             height: 12,
           ),
-          Padding(
+          Container(
             padding: const EdgeInsets.only(left: 4),
-            child: Container(
-              width: 140,
-              child: Text(
-                title,
-                overflow: TextOverflow.ellipsis,
-                style: TextStyle(
-                    fontSize: 18,
-                    color: Colors.white,
-                    fontWeight: FontWeight.w600),
-              ),
+            width: 140,
+            child: Text(
+              title,
+              overflow: TextOverflow.ellipsis,
+              style: TextStyle(
+                  fontSize: 18,
+                  color: Colors.white,
+                  fontWeight: FontWeight.w600),
             ),
           ),
           SizedBox(
             height: 4,
           ),
-          Padding(
+          Container(
             padding: const EdgeInsets.only(left: 4),
-            child: Container(
-              width: 140,
-              child: Text(
-                desc ?? '',
-                overflow: TextOverflow.ellipsis,
-                style: TextStyle(
-                    fontSize: 16,
-                    color: Colors.grey,
-                    fontWeight: FontWeight.w300),
-              ),
+            width: 140,
+            child: Text(
+              desc ?? '',
+              overflow: TextOverflow.ellipsis,
+              style: TextStyle(
+                  fontSize: 16,
+                  color: Colors.grey,
+                  fontWeight: FontWeight.w300),
             ),
           ),
         ],
@@ -67,4 +63,3 @@ class SmallCard extends StatelessWidget {
     );
   }
 }
-
