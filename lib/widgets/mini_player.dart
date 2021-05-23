@@ -78,14 +78,12 @@ class MiniPlayer extends StatelessWidget {
                 icon: Feather.heart,
                 tapEvent: () {},
                 isActive: false,
-                timeFactor: 4,
               ),
               TabItem(
                 name: 'PROFILE',
                 icon: Feather.play,
                 tapEvent: () {},
                 isActive: false,
-                timeFactor: 4,
               ),
             ],
           ),
@@ -102,13 +100,11 @@ class TabItem extends StatelessWidget {
     @required this.name,
     @required this.tapEvent,
     @required this.isActive,
-    @required this.timeFactor,
   }) : super(key: key);
 
   final String name;
   final GestureTapCallback tapEvent;
   final bool isActive;
-  final int timeFactor; // for delayed animation
   final IconData icon;
   @override
   Widget build(BuildContext context) {

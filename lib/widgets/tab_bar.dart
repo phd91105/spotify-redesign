@@ -31,28 +31,24 @@ class CustomTabBar extends StatelessWidget {
             icon: Feather.home,
             tapEvent: () {},
             isActive: true,
-            timeFactor: 1,
           ),
           TabItem(
             name: 'SEARCH',
             icon: Feather.search,
             tapEvent: () {},
             isActive: false,
-            timeFactor: 2,
           ),
           TabItem(
             name: 'LIBRARY',
             icon: Feather.menu,
             tapEvent: () {},
             isActive: false,
-            timeFactor: 3,
           ),
           TabItem(
             name: 'PROFILE',
             icon: Feather.user,
             tapEvent: () => Get.off(LoginScreen()),
             isActive: false,
-            timeFactor: 4,
           ),
         ],
       ),
@@ -67,13 +63,11 @@ class TabItem extends StatelessWidget {
     @required this.name,
     @required this.tapEvent,
     @required this.isActive,
-    @required this.timeFactor,
   }) : super(key: key);
 
   final String name;
   final GestureTapCallback tapEvent;
   final bool isActive;
-  final int timeFactor; // for delayed animation
   final IconData icon;
   @override
   Widget build(BuildContext context) {
